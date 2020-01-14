@@ -1,14 +1,21 @@
 import React from "react";
 import "./ImageLink.css";
 
-const ImageLink = () => {
+const ImageLink = ({ onInputChange, onButtonSubmit }) => {
   return (
     <div>
       <p className="f3">{"This App detects faces in pictures! Try It!"}</p>
       <div className="center">
         <div className="center form pa4 br3 shadow-5 form">
-          <input className="f4 pa2 w-70 center" type="text" />
-          <button className="w-30 grow f4 link ph3 pv2 dib white bg-light-purple pointer">
+          <input
+            className="f4 pa2 w-70 center"
+            type="text"
+            onChange={onInputChange}
+          />
+          <button
+            className="w-30 grow f4 link ph3 pv2 dib white bg-light-purple pointer"
+            onClick={onButtonSubmit}
+          >
             Detect
           </button>
         </div>
